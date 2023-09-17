@@ -1,0 +1,35 @@
+version: "3"
+
+services:
+  auth-service:
+    build:
+      context: ./university-management-auth-service
+      args:
+        - NODE_ENV=development
+    ports:
+      - "3001:3001"
+    environment:
+      - REDIS_HOST=redis
+    depends_on:
+      - redis
+
+  core-service:
+    build:
+      context: ./university-management-core-service
+      args:
+        - NODE_ENV=development
+    ports:
+      - "3002:3002"
+
+  api-gateway:
+    build:
+      context: ./university-management-api-gateway
+      args:
+        - NODE_ENV=development
+    ports:
+      - "3003:3003"
+
+  redis:
+    image: redis:alpine
+    ports:
+      - "6379:6379"
