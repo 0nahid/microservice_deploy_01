@@ -2,10 +2,7 @@ version: "3"
 
 services:
   auth-service:
-    build:
-      context: ./university-management-auth-service
-      args:
-        - NODE_ENV=development
+    image: 0nahid/auth-service:latest
     ports:
       - "3001:3001"
     environment:
@@ -14,18 +11,12 @@ services:
       - redis
 
   core-service:
-    build:
-      context: ./university-management-core-service
-      args:
-        - NODE_ENV=development
+    image: 0nahid/core-service:latest
     ports:
       - "3002:3002"
 
   api-gateway:
-    build:
-      context: ./university-management-api-gateway
-      args:
-        - NODE_ENV=development
+    image: 0nahid/api-gateway:latest
     ports:
       - "3003:3003"
 
