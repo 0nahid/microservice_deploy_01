@@ -8,10 +8,11 @@ WORKDIR /usr/src/app
 COPY package*.json ./
 RUN npm install
 
-RUN npx prisma generate
-
 # Bundle app source
 COPY . .
+
+# Generate Prisma client
+RUN npx prisma generate
 
 # Expose the port the app runs on
 EXPOSE 3002
