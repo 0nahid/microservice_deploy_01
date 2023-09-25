@@ -1,0 +1,28 @@
+# Ignore node modules directory
+node_modules/
+node_modules/**/*
+
+# Ignore development environment files
+.env.development
+.env.test
+
+# Ignore log files
+*.log
+
+# Ignore the build output directory
+dist/
+
+# Ignore testing and CI/CD configs
+.gitlab-ci.yml
+.travis.yml
+.circleci/
+.github/
+
+# Ignore git directory and files
+.git/
+.gitignore
+
+# Ignore editor config files
+.editorconfig
+.idea/
+.vscode/
