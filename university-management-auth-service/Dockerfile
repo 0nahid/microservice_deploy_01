@@ -1,19 +1,23 @@
-# Use Node.js image
+# Use an official Node runtime as a base image
 FROM node:16
 
-# Create app directory
+# Set the working directory inside the container
 WORKDIR /usr/src/app
 
-# Install app dependencies
-COPY package*.json ./
-RUN npm install
+# Copy the package.json and yarn.lock
+COPY package.json yarn.lock ./
 
+# Install dependencies
+RUN yarn install --production=false
 
-# Bundle app source
+# Copy the source code into the container
 COPY . .
+
+# Build the TypeScript code
+RUN yarn tsc
 
 # Expose the port the app runs on
 EXPOSE 3001
 
 # Command to run the application
-CMD ["npm", "start"]
+CMD ["yarn", "start"]

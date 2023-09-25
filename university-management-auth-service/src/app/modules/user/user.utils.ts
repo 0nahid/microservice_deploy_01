@@ -22,10 +22,15 @@ export const generateStudentId = async (
 ): Promise<string> => {
   const currentId =
     (await findLastStudentId()) || (0).toString().padStart(5, '0'); //00000
-  //increment by 1
+
+  // increment by 1
   let incrementedId = (parseInt(currentId) + 1).toString().padStart(5, '0');
-  //20 25
-  incrementedId = `${academicSemester.year.substring(2)}${
+
+  // convert year to string if it's a number
+  const yearStr = academicSemester?.year?.toString() || '';
+
+  // using substring on the string representation of year
+  incrementedId = `${yearStr.substring(2)}${
     academicSemester.code
   }${incrementedId}`;
 
