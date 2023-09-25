@@ -2,25 +2,33 @@ version: "3"
 
 services:
   auth-service:
-    image: 0nahid/auth-service:latest 
+    build: ./university-management-auth-service
     ports:
       - "3001:3001"
     environment:
-      - REDIS_HOST=redis
+      REDIS_URL: "redis://redis:6379"
     depends_on:
       - redis
 
   core-service:
-    image: 0nahid/core-service:latest
+    build: ./university-management-core-service
     ports:
       - "3002:3002"
+    environment:
+      REDIS_URL: "redis://redis:6379"
+    depends_on:
+      - redis
 
   api-gateway:
-    image: 0nahid/api-gateway:latest
+    build: ./university-management-api-gateway
     ports:
       - "3003:3003"
+    environment:
+      REDIS_URL: "redis://redis:6379"
+    depends_on:
+      - redis
 
   redis:
-    image: redis:alpine
+    image: "redis:alpine"
     ports:
       - "6379:6379"

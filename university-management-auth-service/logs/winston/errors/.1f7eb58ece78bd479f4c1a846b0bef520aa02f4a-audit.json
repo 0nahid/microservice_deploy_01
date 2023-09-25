@@ -14,6 +14,11 @@
             "date": 1695638772312,
             "name": "/Users/nahid/Documents/L2/Docker/Microservice/university-management-auth-service/logs/winston/errors/phu-2023-25-09-16-error.log",
             "hash": "98ab789b65cf8d791d3788dea5050e84c1e8570f7abcb298d205d73f52b26caa"
+        },
+        {
+            "date": 1695664746151,
+            "name": "/Users/nahid/Documents/L2/Docker/Microservice/university-management-auth-service/logs/winston/errors/phu-2023-25-09-23-error.log",
+            "hash": "fff201dfd186c1c536712168f5bb9186fa210e85c308e6afd2b2ce232b6cdb3e"
         }
     ],
     "hashType": "sha256"
