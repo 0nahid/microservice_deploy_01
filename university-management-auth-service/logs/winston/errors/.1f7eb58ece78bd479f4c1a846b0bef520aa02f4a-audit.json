@@ -1,0 +1,15 @@
+{
+    "keep": {
+        "days": true,
+        "amount": 14
+    },
+    "auditLog": "/Users/nahid/Documents/L2/Docker/Microservice/university-management-auth-service/logs/winston/errors/.1f7eb58ece78bd479f4c1a846b0bef520aa02f4a-audit.json",
+    "files": [
+        {
+            "date": 1695573401093,
+            "name": "/Users/nahid/Documents/L2/Docker/Microservice/university-management-auth-service/logs/winston/errors/phu-2023-24-09-22-error.log",
+            "hash": "71fbdd0822139cd411d89b10af431d14f4a98469fbcf36a0c7012fe1000928eb"
+        }
+    ],
+    "hashType": "sha256"
+}

@@ -9,6 +9,11 @@
             "date": 1695036370760,
             "name": "/Users/nahid/Documents/L2/Docker/Microservice/university-management-core-service/logs/winston/errors/phu-2023-18-09-17-error.log",
             "hash": "eae7c5206792be158ada65cb096c586ff3dd6496623f499f0748efef87828683"
+        },
+        {
+            "date": 1695573361419,
+            "name": "/Users/nahid/Documents/L2/Docker/Microservice/university-management-core-service/logs/winston/errors/phu-2023-24-09-22-error.log",
+            "hash": "d7c70c733bdd5ade115a8cf48e56d519b15a3ec8ce9f47b430a541c9605e5781"
         }
     ],
     "hashType": "sha256"
